@@ -1,17 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img
+    alt="Vue logo"
+    src="./assets/logo.png"
+    style="max-width: 10%; height: auto;"
+  />
+  <the-title msg="Muse2Seq"></the-title>
+  <models-bar></models-bar>
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheTitle from "./components/Title.vue";
+import ModelsBar from "./components/ModelsBar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    TheTitle,
+    ModelsBar,
   }
-}
+};
 </script>
 
 <style>
