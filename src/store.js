@@ -5,7 +5,7 @@ const store = createStore({
     modelsIds: ["1", "2"],
     models: {
       "1": {
-        name: "A",
+        name: "First",
         form: {
           input: String,
           genre: String,
@@ -13,7 +13,7 @@ const store = createStore({
         },
       },
       "2": {
-        name: "B",
+        name: "Second",
         form: {
           input: String,
           genre: String,
