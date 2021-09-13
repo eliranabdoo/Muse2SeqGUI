@@ -6,18 +6,18 @@ const store = createStore({
     models: {
       "1": {
         name: "First",
-        form: {
-          input: String,
-          genre: String,
-          level: Number,
+        formScheme: {
+          "input": String,
+          "genre": String,
+          "level": Number,
         },
       },
       "2": {
         name: "Second",
-        form: {
-          input: String,
-          genre: String,
-          level: Number,
+        formScheme: {
+          "input": String,
+          "genre": String,
+          "level": Number,
         },
       },
     },
@@ -27,6 +27,14 @@ const store = createStore({
       return (modelId) => {
         if (state.modelsIds.includes(modelId)) {
           return state.models[modelId].name;
+        }
+        return null;
+      };
+    },
+    getModelFormScheme(state) {
+      return (modelId) => {
+        if (state.modelsIds.includes(modelId)) {
+          return state.models[modelId].formScheme;
         }
         return null;
       };
